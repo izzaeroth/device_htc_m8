@@ -13,8 +13,8 @@
   },
   {
     "remote": "gh",
-    "repository": "TheMuppets/proprietary_vendor_htc",
-    "taget_path": "vendor/htc",
+    "repository": "proprietary_vendor_htc",
+    "target_path": "vendor/htc",
     "revision": "cm-12.0"
   }
 ]
