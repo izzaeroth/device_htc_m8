@@ -16,8 +16,7 @@ LOCAL_SHARED_LIBRARIES := \
     libutils \
     libbinder \
     libcutils \
-    libhardware_legacy \
-    librilutils
+    libhardware_legacy
 
 #LOCAL_CFLAGS := -DANDROID_MULTI_SIM -DDSDA_RILD1
 
