@@ -142,6 +142,10 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes
 
+# Kernel Configuration
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/etc/init.d/92Elite:system/etc/init.d/92Elite \
+    
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/keypad_8974.kl:system/usr/keylayout/keypad_8974.kl \
