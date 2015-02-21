@@ -7,7 +7,7 @@
   },
   {
     "remote": "gh",
-    "repository": "Buckmarble/linaro-4.10",
+    "repository": "Buckmarble/linaro-4.9.3",
     "target_path": "prebuilts/gcc/linux-x86/toolchain/linaro",
     "revision": "lp"
   },  
