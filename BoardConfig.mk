@@ -68,6 +68,12 @@ TARGET_GCC_VERSION_EXP := 4.8-sm
 TARGET_GCC_VERSION_ARM := arm-eabi-4.9-ln
 TARGET_KERNEL_TC_SUFFIX := arm-cortex_a15-linux-gnueabihf-
 
+# Build optimizations
+OPT_MEMORY := true
+TARGET_USE_O3 := true
+STRICT_ALIASING := true
+SUPPRES_UNUSED_WARNING := true
+
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
