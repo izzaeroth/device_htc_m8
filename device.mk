@@ -145,10 +145,6 @@ PRODUCT_PACKAGES += \
 # Kernel Configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/etc/init.d/92Elite:system/etc/init.d/92Elite \
-
-# SU.d
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/su.d/elite_permissive.sh:system/su.d/elite_permissive.sh \
     
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
