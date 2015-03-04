@@ -145,6 +145,7 @@ PRODUCT_PACKAGES += \
 # Kernel Configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/etc/init.d/92Elite:system/etc/init.d/92Elite \
+    $(LOCAL_PATH)/bin/pnpmgr:system/bin/pnpmgr \
     
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
