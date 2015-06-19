@@ -64,7 +64,6 @@ TARGET_KERNEL_CONFIG := cm_m8_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/msm8974
 
 # Custom toolchains
-TARGET_GCC_VERSION_EXP := 4.8-sm
 TARGET_GCC_VERSION_ARM := arm-eabi-4.9-ln
 TARGET_KERNEL_TC_SUFFIX := arm-cortex_a15-linux-gnueabihf-
 
