@@ -1,9 +1,9 @@
 [
   {
     "remote": "gh",
-    "repository": "Buckmarble/Elite_M8",
+    "repository": "B14CKB1RD-Kernel/B14CKB1RD_kernel_m8",
     "target_path": "kernel/htc/msm8974",
-    "revision": "cm-12.0"
+    "revision": "l5"
   },
   {
     "remote": "cm",
