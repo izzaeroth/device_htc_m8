@@ -3,7 +3,7 @@
     "remote": "gh",
     "repository": "B14CKB1RD-Kernel/B14CKB1RD_kernel_m8",
     "target_path": "kernel/htc/msm8974",
-    "revision": "l5"
+    "revision": "L5"
   },
   {
     "remote": "cm",
