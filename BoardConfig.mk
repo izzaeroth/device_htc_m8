@@ -63,10 +63,11 @@ BOARD_CUSTOM_BOOTIMG_MK := device/htc/m8/mkbootimg.mk
 TARGET_KERNEL_CONFIG := cm_m8_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/msm8974
 
-# Build optimizations
 # Custom toolchains
 TARGET_GCC_VERSION_ARM := arm-eabi-4.9-ln
 TARGET_KERNEL_TC_SUFFIX := arm-cortex_a15-linux-gnueabihf-
+
+# Build optimizations
 OPT_MEMORY := true
 TARGET_USE_O3 := true
 STRICT_ALIASING := true
