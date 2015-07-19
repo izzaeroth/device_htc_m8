@@ -63,9 +63,6 @@ BOARD_CUSTOM_BOOTIMG_MK := device/htc/m8/mkbootimg.mk
 TARGET_KERNEL_CONFIG := cm_m8_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/msm8974
 
-# Custom toolchains
-TARGET_GCC_VERSION_ARM := arm-eabi-4.9-ln
-
 # Build optimizations
 OPT_MEMORY := true
 TARGET_USE_O3 := true
