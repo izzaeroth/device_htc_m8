@@ -42,7 +42,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 
-import com.android.internal.telephony.ITelephony;
+import android.telecom.TelecomManager;
 
 import java.lang.Math;
 import java.io.BufferedReader;
@@ -83,6 +83,10 @@ public class Dotcase extends Activity implements SensorEventListener
                     View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |
                     View.SYSTEM_UI_FLAG_FULLSCREEN |
                     View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+
+        WindowManager.LayoutParams lp = getWindow().getAttributes();
+        lp.screenBrightness = WindowManager.LayoutParams.BRIGHTNESS_OVERRIDE_FULL;
+        getWindow().setAttributes(lp);
 
         final DrawView drawView = new DrawView(mContext);
         setContentView(drawView);
@@ -214,20 +218,11 @@ public class Dotcase extends Activity implements SensorEventListener
             if (Math.abs(distanceY) > 60) {
                 if (sStatus.isRinging()) {
                     sStatus.setOnTop(false);
-                    ITelephony telephonyService = ITelephony.Stub.asInterface(
-                            ServiceManager.checkService(Context.TELEPHONY_SERVICE));
+                    TelecomManager telecomManager = (TelecomManager) mContext.getSystemService(Context.TELECOM_SERVICE);
                     if (distanceY < 60) {
-                        try {
-                            telephonyService.endCall();
-                        } catch (RemoteException e) {
-                            Log.e(TAG, "Error ignoring call", e);
-                        }
+                        telecomManager.endCall();
                     } else if (distanceY > 60) {
-                        try {
-                            telephonyService.answerRingingCall();
-                        } catch (RemoteException e) {
-                            Log.e(TAG, "Error answering call", e);
-                        }
+                        telecomManager.acceptRingingCall();
                     }
                 } else if (sStatus.isAlarm()) {
                     Intent i = new Intent();
