@@ -102,7 +102,7 @@ void vendor_load_properties()
 }
 
 void cdma_properties(char default_cdma_sub[], char default_network[]
-{
+
     property_set("ro.telephony.default_cdma_sub", default_cdma_sub);
     property_set("ro.telephony.default_network", default_network);
 
