@@ -35,10 +35,10 @@
 #include "util.h"
 
 void cdma_properties(char cdma_subscription[],
-                     char default_network[];
+                     char default_network[]);
 
 void vendor_load_properties()
-
+{
     char platform[PROP_VALUE_MAX];
     char bootmid[PROP_VALUE_MAX];
     char device[PROP_VALUE_MAX];
@@ -54,6 +54,7 @@ void vendor_load_properties()
     if (strstr(bootmid, "0P6B20000")) {
         /* m8vzw (m8wl) */
         cdma_properties("0", "10");
+        property_set("ro.product.model", "m8wl");
         property_set("ro.build.fingerprint", "htc/HTCOneM8vzw/htc_m8wl:4.4.4/KTU84P/390638.4:user/release-keys");
         property_set("ro.build.description", "3.28.605.4 CL390638 release-keys");
         property_set("ro.product.device", "htc_m8wl");
@@ -78,6 +79,7 @@ void vendor_load_properties()
         property_set("ro.telephony.get_imsi_from_sim", "true");
     } else if (strstr(bootmid, "0P6B70000")) {
         /* m8spr (m8whl) */
+        property_set("ro.product.model", "m8whl");
         cdma_properties("1", "8");
         property_set("ro.build.fingerprint", "htc/sprint_wwe/htc_m8whl:5.0.1/LRX22C/476182.10:user/release-keys");
         property_set("ro.build.description", "4.20.651.10 CL476182 release-keys");
@@ -87,11 +89,18 @@ void vendor_load_properties()
         property_set("ro.ril.enable.pre_r8fd=1", "1");
         property_set("ro.ril.oem.ecclist", "911");
         property_set("ro.ril.set.mtusize", "1422");
+        property_set("ro.cdma.home.operator.numeric", "310120");
+        property_set("gsm.sim.operator.numeric", "310120");
+        property_set("gsm.operator.numeric", "310120");
+        property_set("ro.cdma.home.operator.alpha", "Sprint");
+        property_set("gsm.sim.operator.alpha", "Sprint");
+        property_set("gsm.operator.alpha", "310120");
         property_set("ro.telephony.ril_class", "m8sprRIL");
     } else {
         /* m8 */
-        property_set("ro.build.fingerprint", "htc/m8_google/htc_m8:5.0.1/LRX22C.H5/434277:user/release-keys");
-        property_set("ro.build.description", "3.11.1700.5 CL434277 release-keys");
+        property_set("ro.product.model", "m8");
+        property_set("ro.build.fingerprint", "htc/m8_google/htc_m8:5.1/LMY47O.H4/519376:user/release-keys");
+        property_set("ro.build.description", "4.04.1700.4 CL519376 release-keys");
         property_set("ro.product.device", "htc_m8");
         property_set("ro.telephony.default_network", "9");
         property_set("telephony.lteOnGsmDevice", "1");
@@ -101,8 +110,8 @@ void vendor_load_properties()
     ERROR("Found bootmid %s setting build properties for %s device\n", bootmid, device);
 }
 
-void cdma_properties(char default_cdma_sub[], char default_network[]
-
+void cdma_properties(char default_cdma_sub[], char default_network[])
+{
     property_set("ro.telephony.default_cdma_sub", default_cdma_sub);
     property_set("ro.telephony.default_network", default_network);
 
