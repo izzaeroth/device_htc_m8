@@ -38,7 +38,7 @@ void cdma_properties(char cdma_subscription[],
                      char default_network[];
 
 void vendor_load_properties()
-{
+
     char platform[PROP_VALUE_MAX];
     char bootmid[PROP_VALUE_MAX];
     char device[PROP_VALUE_MAX];
