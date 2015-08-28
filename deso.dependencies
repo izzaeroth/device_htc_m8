@@ -16,5 +16,9 @@
     "repository": "izzaeroth/proprietary_vendor_htc",
     "target_path": "vendor/htc",
     "revision": "cm-12.1"
-  }
-]
+  },
+  {
+    "remote": "gh",
+    "repository": izzaeroth/arm-eabi-4.7-ln",
+    "target_path": "prebuilts/gcc/linux-x86/arm/arm-eabi-4.7-ln",
+    "revision": "master"
