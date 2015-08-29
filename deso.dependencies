@@ -19,7 +19,7 @@
   },
   {
     "remote": "gh",
-    "repository": izzaeroth/arm-eabi-4.7-ln",
+    "repository": "izzaeroth/arm-eabi-4.7-ln",
     "target_path": "prebuilts/gcc/linux-x86/arm/arm-eabi-4.7-ln",
     "revision": "master"
   }
