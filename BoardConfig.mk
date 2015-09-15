@@ -70,8 +70,7 @@ STRICT_ALIASING := true
 SUPPRES_UNUSED_WARNING := true
 
 # Custom toolchains
-TARGET_GCC_VERSION_ARM := arm-eabi-4.7-ln
-TARGET_KERNEL_TC_SUFFIX := arm-cortex_a15-linux-gnueabihf-
+TARGET_GCC_VERSION_ARM := arm-eabi-4.8-sm
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
