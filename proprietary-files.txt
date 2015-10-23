@@ -178,7 +178,7 @@ etc/tfa/voip_l.drc
 etc/tfa/voip_l.eq
 etc/tfa/voip_l.preset
 etc/tfa/voip.preset
--framework/htcirlibs.jar
+framework/htcirlibs.jar
 lib/drm/libfwdlockengine.so
 lib/hw/camera.vendor.msm8974.so
 lib/hw/consumerir.default.so
@@ -367,7 +367,7 @@ vendor/lib/libscve.so
 vendor/lib/libscve_stub.so
 vendor/lib/libssd.so
 vendor/lib/libthermalclient.so
--lib/libtime_genoff.so:vendor/lib/libtime_genoff.so
+lib/libtime_genoff.so:vendor/lib/libtime_genoff.so
 vendor/lib/libwvdrm_L1.so
 vendor/lib/libwvm.so
 vendor/lib/libWVphoneAPI.so

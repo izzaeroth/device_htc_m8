@@ -68,6 +68,9 @@ OPT_MEMORY := true
 TARGET_USE_O3 := true
 STRICT_ALIASING := true
 SUPPRES_UNUSED_WARNING := true
+GRAPHITE_OPTS := true
+TARGET_USE_PIPE := true
+DEVICE_USE_SYNAPSE := true
 
 # Custom toolchains
 TARGET_GCC_VERSION_ARM := arm-eabi-4.8-sm

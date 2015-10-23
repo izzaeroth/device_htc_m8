@@ -121,8 +121,6 @@ static int amp_module_open(const hw_module_t *module, UNUSED const char *name,
 
     m8_dev->amp_dev.set_input_devices = NULL;
     m8_dev->amp_dev.set_output_devices = amp_set_output_devices;
-    m8_dev->amp_dev.enable_input_devices = NULL;
-    m8_dev->amp_dev.enable_output_devices = amp_enable_output_devices;
     m8_dev->amp_dev.set_mode = amp_set_mode;
     m8_dev->amp_dev.output_stream_start = NULL;
     m8_dev->amp_dev.input_stream_start = NULL;
